@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "f6ba3ac2-ac3d-4dd8-98a0-1c8378cf5004",
+		"name": "Tasks Management Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Tasks Categories",
+			"item": [
+				{
+					"name": "Get All Tasks Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/bagaskara-restful/TaskCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bagaskara-restful",
+								"TaskCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tasks Categories By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/bagaskara-restful/TaskCategories?id=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bagaskara-restful",
+								"TaskCategories"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Tasks Categories",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "PHP ",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/bagaskara-restful/TaskCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bagaskara-restful",
+								"TaskCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update TasksCategories",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Belajar PHP",
+									"type": "default"
+								},
+								{
+									"key": "id",
+									"value": "7",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/bagaskara-restful/TaskCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bagaskara-restful",
+								"TaskCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete TasksCategories",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "7",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/bagaskara-restful/TaskCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bagaskara-restful",
+								"TaskCategories"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Berisi tentang kategori dari setiap tasks"
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Get All Tasks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/bagaskara-restful/Tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bagaskara-restful",
+								"Tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Tasks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "doc_url",
+									"type": "file",
+									"src": "/D:/Data Bagas/bagas.jpg"
+								},
+								{
+									"key": "category_id",
+									"value": "3",
+									"type": "default"
+								},
+								{
+									"key": "title",
+									"value": "PHP OOP",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Belajar PHP OOP",
+									"type": "default"
+								},
+								{
+									"key": "start_date",
+									"value": "2022-10-29",
+									"type": "default"
+								},
+								{
+									"key": "finish_date",
+									"value": "2022-10-31",
+									"type": "default"
+								},
+								{
+									"key": "status",
+									"value": "New",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/bagaskara-restful/Tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bagaskara-restful",
+								"Tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tasks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "doc_url",
+									"type": "file",
+									"src": "/D:/Data Bagas/WPU/Bootstrap/BootstrapPortofolio/img/portofolio/kedu.jpg"
+								},
+								{
+									"key": "category_id",
+									"value": "3",
+									"type": "default"
+								},
+								{
+									"key": "title",
+									"value": "PHP Composer",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Belajar PHP Composer",
+									"type": "default"
+								},
+								{
+									"key": "start_date",
+									"value": "2022-10-28",
+									"type": "default"
+								},
+								{
+									"key": "finish_date",
+									"value": "2022-10-30",
+									"type": "default"
+								},
+								{
+									"key": "status",
+									"value": "New",
+									"type": "default"
+								},
+								{
+									"key": "id",
+									"value": "13",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/bagaskara-restful/Tasks/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bagaskara-restful",
+								"Tasks",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tasks",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "13",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/bagaskara-restful/Tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bagaskara-restful",
+								"Tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tasks By Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
